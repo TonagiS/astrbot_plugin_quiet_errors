@@ -1,0 +1,29 @@
+{
+  "groups_only": {
+    "type": "bool",
+    "description": "只在群聊里拦报错；关掉则私聊也拦（不推荐，私聊剩你一个人好排查）",
+    "default": true
+  },
+  "notify_admin": {
+    "type": "bool",
+    "description": "拦下来之后用桥接接口私聊告诉管理员（一条一条，不刷群）",
+    "default": true
+  },
+  "patterns": {
+    "type": "list",
+    "description": "命中这些正则就当作报错（不区分大小写）",
+    "default": [
+      "Error occurred while processing agent",
+      "Traceback \\(most recent call last\\)",
+      "^\\s*(Error|Exception)\\s*[:：]",
+      "status:\\s*(4\\d\\d|5\\d\\d)",
+      "rate limit",
+      "invalid api key",
+      "insufficient_quota",
+      "APIConnectionError",
+      "Timeout",
+      "发生错误，请联系管理员",
+      "错误[:：]\\s*"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+name: astrbot_plugin_quiet_errors
+display_name: 报错不入群
+author: Tonagi
+desc: LLM/agent 报错时 AstrBot 会直接把原始异常发到会话里；本插件在 send 层拦住，群聊不显示，只写日志并私聊管理员。
+version: 1.0.0
+astrbot_version: ">=4.22.0"
+support_platforms:
+  - aiocqhttp
+repo: "https://github.com/TonagiS/astrbot_plugin_quiet_errors"
